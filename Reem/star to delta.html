@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+        <script>
+        function calc_delta ()
+{
+         var r1 = document.getElementById ("r1").value;
+var r2 = document.getElementById ("r2").value;
+var r3 = document.getElementById ("r3").value;
+var R1 = parseInt (r1);
+var R2 = parseInt (r2);
+var R3 = parseInt (r3);
+var R12= R1+R2+ (R1*R2)/R3; var R13= R1+R3+ (R1*R3)/R2;  var R23= R3+R2+ (R3*R2)/R1;
+document.getElementById ("x").innerHTML = R12 ;
+document.getElementById ("y").innerHTML = R13 ;
+document.getElementById ("z").innerHTML = R23 ;
+
+}
+
+        </script>
+    <meta charset="utf-8">
+    <title>Star To Delta</title>
+    <style media="screen">
+      body{
+         background-size:100%;
+         padding-top=100px;
+      }
+      h2{
+         color:white;
+      }
+      h1{
+        padding-left: 1px; text-align: center; color:#ff4d4d; 
+      }
+      input{border: 2px solid #ff6666; border-radius: 15px;
+      width: 200px; height: 30px;   padding-left: 1%; width:20%;}
+      button{
+        width: 100px; background-color:#ff6666; color: white; padding: 15px; padding-bottom: 30px;
+          border: 2px solid #ff6666; border-radius: 10px; height: 30px; font-size: 16.5px; margin-left: 8px;margin-right=50px;
+      }
+      form{  padding-left: 26%;
+      }
+      ul{
+         padding-left: 26%;
+      }
+      #hit{
+        width: 300px; background-color: #ff6666; color: white; padding: 15px; padding-bottom: 30px;
+          border: 2px solid #ff6666; border-radius: 10px; height: 30px; font-size: 16.5px; margin-left: 8px;margin-right=50px;
+
+      }
+      #submit{
+        width: 200px; background-color: #ff6666; color: white; padding: 15px; padding-bottom: 30px;
+          border: 2px solid #ff6666; border-radius: 10px; height: 30px; font-size: 16.5px; margin-left: 8px;margin-right=50px;
+      }
+img{
+  padding-left: 26%; width:48%;
+}
+
+    </style>
+  </head>
+  <body style="background-color:  #e75858;" background="sky.gif">
+
+<h1>Reem Emad Sec.1 B.N.34</h1>
+    <img id="img"src="star_to_delta.png" width="648px" height="100px"alt="" style="max-width:100%;height:auto;">
+<br><br><br>
+  <form>
+
+    <input type = "text" id = "r1" placeholder = "R1">  </input>
+    <input type = "text" id = "r2" placeholder = "R2">  </input>
+    <input type = "text" id = "r3" placeholder = "R3">  </input> <br><br>
+    <h2 > The value of R12 is : <span id="x"> </span> </h2>
+    <h2 > The value of R13 is : <span id="y"> </h2>
+    <h2 > The value of R23 is : <span id="z"> </span> </h2>
+
+    </form>
+<ul>
+    <button onclick="calc_delta()" type="submit"id="submit">Submit your value</button>
+
+<a href="thanks.html"><button type="submit">The End</button></a>
+<a href="delta to star.html">
+    <button id ="hit" type="button" name="button">Transform From Delta To Star</button>
+</a>
+</ul>
+
+  </body>
+</html>
